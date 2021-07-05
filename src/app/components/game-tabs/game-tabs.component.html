@@ -1,0 +1,38 @@
+<div class="game-tabs">
+    <div class="game-tabs-nav" id="game-tabs">
+    <div class="game-about "   [ngClass]="{'active': aboutVisible == true}" (click)=switchSection($event)>About</div>
+    <div class="game-screenshots" [ngClass]="{'active': screenshotsVisible == true}" (click)=switchSection($event) >ScreenShots</div>
+    <div class="game-trailer" [ngClass]="{'active': trailerVisible == true}" (click)=switchSection($event)>Trailer</div>
+    </div>
+  </div>
+  <div class="section" >
+   
+    <div  *ngIf="aboutVisible" id= 'section-about' class="section-about  ">
+      <a *ngIf="game?.website" href="{{game.website}}" class="section-website">website: {{game.website}}</a><br>
+      <div *ngIf=game?.description_raw>
+      {{game.description_raw}}
+    </div>
+    </div>
+    <div *ngIf="screenshotsVisible" id= 'section-screenshots'class="section-screenshots">
+      <div *ngIf="game.screenshots?.length">
+    <img 
+    class="section-screenshots-grid"
+    *ngFor="let items of game.screenshots"
+     src="{{items.image}}"
+     alt="gameScreen Shots">
+    </div>
+    </div>
+    <div *ngIf="trailerVisible" id= 'section-trailer' class="section-trailer">
+      <div  *ngIf="game?.video && game.video?.length">
+        <iframe 
+        class="section-trailer-grid"
+        *ngFor="let items of game.video"
+        [src]="items.data.max | safe" frameborder="1" width="50%" height="300"></iframe>
+      </div>
+      <div *ngIf="game.video.length==0">
+       Sorry,Game Trailer is not available...
+      </div>
+    
+    </div>
+
+  </div>

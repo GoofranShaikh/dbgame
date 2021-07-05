@@ -1,0 +1,71 @@
+.game-background {
+  position: relative;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+.game-image-background {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  position: absolute;
+  overflow: none;
+  height: 100vh;
+  top: 1px;
+  width: 100vw;
+  overflow: hidden;
+  background: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+}
+.game-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+}
+.game-name {
+  position: absolute;
+  top: 40vh;
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+}
+.game-released {
+  padding-top: 100px;
+  position: absolute;
+  font-weight: 900;
+  color: goldenrod;
+}
+.game-gauge {
+  font-weight: 100;
+  font-size: small;
+  position: relative;
+  bottom: -100px;
+  right: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #f1f1f1;
+}
+.game-gauge h1 {
+  position: absolute;
+  bottom: -50px;
+  padding-left: 30px;
+  color: goldenrod;
+}
+.game-value {
+  left: 0px;
+  top: 0px;
+  display: block;
+  height: 50px;
+  background-color: goldenrod;
+  border: 2px solid white;
+  color: goldenrod;
+}/*# sourceMappingURL=gamedetails.component.css.map */

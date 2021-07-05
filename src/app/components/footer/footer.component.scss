@@ -1,0 +1,24 @@
+.game-footer{
+    display:flex;
+    position: relative;
+    //bottom:40px;
+    justify-content: center;
+    width:100vw
+
+}
+.social-media{
+    position:absolute;
+    right:20px;
+    //transform: rotate(-90deg);
+    @media only screen and (max-width :600px){
+        position: absolute;
+        bottom:-50px;
+        right:30%;
+    }
+
+    .fab{
+        padding:10px;
+        color:white;
+    }
+
+}

@@ -1,0 +1,124 @@
+.filter{
+    max-width:1200px;
+    margin:60px 10px;
+    padding-left:20px;
+  
+
+    .sort{
+        // width:100px;
+        // height:30px;
+        // border-radius: 4px;
+        width: 100px;
+        position: fixed;
+        height: 30px;
+        top: 14px;
+        background-color: grey;
+        color: white;
+        right: 10px;
+        border-radius: 4px;
+
+        &:hover{
+            transition: 0.5s;
+            border-color:goldenrod;
+            
+           
+        }
+    }
+}
+
+
+
+.game{
+    
+&-container{
+    
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+    margin:80px auto;
+    max-width:1200px;
+   // z-index: 0;
+
+
+}
+&-card{
+   
+   height: 320px;
+   width: 250px;
+   box-shadow: 2px 2px 3px 0px grey ;
+  // position: relative;
+   text-align: center;
+   overflow: hidden;
+   margin-right:30px;
+   margin-bottom:20px;
+   border-radius: 10px;
+
+&:hover{
+    cursor: pointer;
+   // position:static;
+    box-shadow: 5px 2px 5px 0px goldenrod ;
+    transform: translateY(-5px);
+    z-index:0;
+   // z-index: -1;
+   
+}
+  
+}
+
+
+&-thumbnail-container{
+   // position:relative;
+    width:250px;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+
+}
+&-thumbnail{
+   // position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+    width:250px;
+    background: cover;
+//    background: url(https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg);
+
+
+    
+}
+
+&-description{
+    display: flex;
+    color:white;
+    // flex-wrap: wrap;
+   align-items: flex-start;
+   
+
+
+
+}
+
+
+&-platforms-available{
+    display: flex;
+   // position: relative;
+    flex-wrap: wrap;
+
+    bottom: -45px;
+}
+&-platforms-images{
+  
+    height: 20px;
+    border-radius: 50%;
+    margin-right:20px;
+   
+}
+
+
+
+
+
+}

@@ -1,0 +1,88 @@
+.game{
+    &-background{
+    position:relative;
+    margin:60px auto;
+    background: rgba(0,0,0,.4);
+    z-index:-1;
+    }
+    &-image-background{
+    filter: blur(3px);
+   position: absolute;
+    overflow: none;
+    height: 50vh;
+    top:1px;
+    width:100vw;
+    overflow:hidden;
+    background: cover;
+    background: linear-gradient(rgba(0,0,0,1) ,rgba(0,0.1,0.1,0.5))
+    //filter:blur(2px);
+}
+
+&-description{
+    display:flex;
+    height: 50vh;
+   // align-items: center;
+    position:relative;
+    justify-content: center;
+    width:100vw;
+   
+  
+}
+&-name{
+    position:absolute;
+    left:35vw;
+    top:15vh;
+    color:white;
+    font-weight: bold;
+    font-size: 70px;
+@media only screen and (max-width:600px){
+    top:19vh;
+    left:13vw;
+    font-size:37px;
+}
+
+}
+&-released{
+    top:28vh;
+    position:absolute;
+    font-weight: 900;
+    color: white;
+}
+
+&-gauge{
+    font-weight:100;
+    font-size:small;
+    
+   position:relative;
+  //  bottom:-100px;
+    top:35vh;
+    right:10px;
+  // align-self:flex-end;
+    width: 200px;
+    height: 50px;
+    background-color:#f1f1f1;
+    h1{
+        position:absolute;
+       // bottom:-50px;
+        align-self: flex-end;
+        padding-left:30px;
+        color:white;
+    }
+}
+&-value{
+   
+    //left:0px;
+    //top:0px;
+    //position:absolute; 
+    display: block;
+    height: 50px;
+    background-color:goldenrod;
+    border:2px solid white;
+    color:goldenrod; 
+   // width:100px
+   
+  }
+
+
+}
+

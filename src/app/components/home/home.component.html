@@ -1,0 +1,40 @@
+<div class="filter">
+
+    <select name="sort" class="sort" [(ngModel)]=sort (change)=getGames(sort)>
+     
+        <option value="name">Name</option>
+        <option value="-released">Released</option>
+        <option value="-added">Added</option>
+        <option value="-created">Created</option>
+        <option value="-updated">updated</option>
+        <option value="action">Action</option>
+        <option value="metacritic">metacritic</option>
+      </select>
+
+</div>
+
+<div class="game-container"  >
+    <ng-container *ngFor="let list of games" >
+    <div class="game-card" (click)="viewDescription(list.id)">
+        <div class="game-thumbnail-container" >
+        <img src="{{list.background_image}}" alt="gameThumbnail" class="game-thumbnail">
+        </div>
+      
+        <div class="game-description">
+        <p class="game-name" >
+         {{list.name}}
+        </p>
+      </div>
+        <div class="game-platforms-available">
+        <div class="game-platforms" *ngFor="let gamePlatform of list.parent_platforms"  >
+         <img class="game-platforms-images" src="../../../assets/{{gamePlatform.platform.slug}}.png" alt="{{gamePlatform.platform.slug}}">
+       <!-- <img class="game-platforms-images" src="https://goofranshaikh.github.io/gamedb/assets/images/platforms/{{gamePlatform.platform.slug}}.png" alt="{{gamePlatform.platform.slug}}">-->
+          </div>
+          </div>
+        
+
+    </div>
+</ng-container>
+</div>
+
+

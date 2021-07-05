@@ -1,0 +1,18 @@
+<div class="game-details">
+<div class="game-background" >
+<!-- <p *ngIf="!gameDescription.background_image">No image</p> -->
+<img *ngIf ="gameDescription?.background_image" src="{{gameDescription.background_image}}" alt="background" class="game-image-background">
+</div>
+<div class="game-description" style="z-index:-1">
+    <p class="game-name" *ngIf="gameDescription?.name" > {{gameDescription.name}}</p>
+
+    <p class="game-released" *ngIf="gameDescription?.released">Released on {{gameDescription.released | date}}</p>
+    <div class="game-gauge" >
+        <span class="game-value"  [style.width]="rating" > </span>
+        <h1 *ngIf="gameDescription?.rating && gameDescription?.rating_top">Rating- {{gameDescription.rating}}/{{gameDescription.rating_top}}</h1>
+    </div>
+   
+</div>
+
+</div>
+<app-game-tabs [game]='gameDescription'></app-game-tabs>

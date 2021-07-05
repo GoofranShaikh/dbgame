@@ -1,0 +1,100 @@
+$font-weight:900;
+$background-color:rgb(63, 63, 180);
+
+.game{
+    &-tabs-nav{
+        display:flex;
+        justify-content: center;
+      //  flex-wrap: wrap;
+        height:3rem;
+        background-color:$background-color
+    }
+    &-about{
+     padding-right:50px;
+     font-weight: $font-weight;
+     &:hover{
+       transform:translatey(-3px);
+       background: rgba(238, 233, 233,0.1);
+     }
+    //  &:active{
+    //   background: rgba(235, 14, 14, 1);
+    //  }
+
+
+    }
+    &-screenshots{
+     padding-right:50px;
+     font-weight: $font-weight;
+     &:hover{
+      transform:translatey(-3px);
+      background: rgba(238, 233, 233,0.1);
+    }
+       }
+    &-trailer{
+     //padding-right:10px;
+     font-weight: $font-weight;
+     &:hover{
+      transform:translatey(-3px);
+      background: rgba(238, 233, 233,0.1);
+    }
+       }
+}
+
+.section{
+  display :flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  height:cover;
+
+  background-color:rgb(71, 71, 163); ;
+  &-about{
+   width:60vw;
+   font-weight: $font-weight;
+ 
+  }
+  &-website{
+color:white;
+text-decoration:none;
+display:flex;
+font-size:13px;
+&:hover{
+  transition: 0.5s;
+  transform: translateY(3px);
+  color:grey
+}
+  }
+  &-screenshots{
+    font-weight: $font-weight;
+    &-grid{
+      width:30vw;
+      margin: 10px;
+      &:hover{
+        transition: 0.5s;
+        transform: translateY(-3px);
+      }
+    }
+    @media only screen and (max-width:600px){
+      &-grid{
+        width:90vw;
+        margin:10px;
+      }
+    }
+
+  }
+
+  &-trailer{
+    font-weight: $font-weight;
+    @media only screen and (max-width: 600px) {
+      &-grid {
+        width:100%
+      }
+    }
+
+  }
+
+}
+.active{
+ text-decoration: underline;
+ color:white;
+}
